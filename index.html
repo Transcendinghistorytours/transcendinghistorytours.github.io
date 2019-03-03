@@ -644,15 +644,14 @@ Ron Martin, Chair: S A First Peoples’ Museum Foundation.
                         <div class="form-group">
                             <label class="form-control-label" for="form1-0-message">Message</label>
                             <textarea class="form-control" name="message" rows="7" data-form-field="Message" id="form1-0-message"></textarea>
+                           
+                            <br>
+                            <div class="g-recaptcha" data-sitekey="6LfQIpUUAAAAAH1lTMXjwVVhn-FcfsXi5Os1pPUc"></div>
+
                         </div>
-                        <script src="https://www.google.com/recaptcha/api.js?render=6LdlIJUUAAAAAAQ_b1jyFMLoHZCQvEKIuN9sL5nh"></script>
-                          <script>
-                          grecaptcha.ready(function() {
-                              grecaptcha.execute('6LdlIJUUAAAAAAQ_b1jyFMLoHZCQvEKIuN9sL5nh', {action: 'homepage'}).then(function(token) {
-                                 ...
-                              });
-                          });
-                          </script>
+
+                       
+                        
                         <div><button type="submit" class="btn btn-primary">CONTACT US</button></div>
 
                     </form>
@@ -704,7 +703,17 @@ Ron Martin, Chair: S A First Peoples’ Museum Foundation.
   <script src="assets/mobirise-slider-video/script.js"></script>
   <script src="assets/formoid/formoid.min.js"></script>
   <script data-cfasync="false" type="text/javascript" src="assets/form-submission/form-submission-handler.js"></script>
-
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+window.onload = function() {
+  var recaptcha = document.forms["gform"]["g-recaptcha-response"];
+  recaptcha.required = true;
+  recaptcha.oninvalid = function(e) {
+    // do something
+    alert("Please complete the captcha");
+  }
+}
+</script>
   <input name="animation" type="hidden">
   </body>
 </html>
