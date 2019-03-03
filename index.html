@@ -635,7 +635,7 @@ Ron Martin, Chair: S A First Peoples’ Museum Foundation.
                             <div class="col-xs-12 col-md-4">
                                 <div class="form-group">
                                     <label class="form-control-label" for="form1-0-phone">Phone</label>
-                                    <input type="tel" class="form-control" name="phone" data-form-field="Phone" id="form1-0-phone">
+                                    <input type="tel" class="form-control" name="phone" required="" data-form-field="Phone" id="form1-0-phone">
                                 </div>
                             </div>
 
@@ -645,7 +645,14 @@ Ron Martin, Chair: S A First Peoples’ Museum Foundation.
                             <label class="form-control-label" for="form1-0-message">Message</label>
                             <textarea class="form-control" name="message" rows="7" data-form-field="Message" id="form1-0-message"></textarea>
                         </div>
-
+                        <script src="https://www.google.com/recaptcha/api.js?render=6LdlIJUUAAAAAAQ_b1jyFMLoHZCQvEKIuN9sL5nh"></script>
+                          <script>
+                          grecaptcha.ready(function() {
+                              grecaptcha.execute('6LdlIJUUAAAAAAQ_b1jyFMLoHZCQvEKIuN9sL5nh', {action: 'homepage'}).then(function(token) {
+                                 ...
+                              });
+                          });
+                          </script>
                         <div><button type="submit" class="btn btn-primary">CONTACT US</button></div>
 
                     </form>
@@ -697,14 +704,7 @@ Ron Martin, Chair: S A First Peoples’ Museum Foundation.
   <script src="assets/mobirise-slider-video/script.js"></script>
   <script src="assets/formoid/formoid.min.js"></script>
   <script data-cfasync="false" type="text/javascript" src="assets/form-submission/form-submission-handler.js"></script>
-  <script src="https://www.google.com/recaptcha/api.js?render=reCAPTCHA_site_key"></script>
-  <script>
-  grecaptcha.ready(function() {
-      grecaptcha.execute('6LdlIJUUAAAAAAQ_b1jyFMLoHZCQvEKIuN9sL5nh', {action: 'homepage'}).then(function(token) {
-         ...
-      });
-  });
-  </script>
+
   <input name="animation" type="hidden">
   </body>
 </html>
